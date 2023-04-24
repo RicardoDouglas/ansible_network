@@ -1,0 +1,9 @@
+- name: Apply the provided configuration
+  cisco.ios.ios_hostname:
+    config:
+      hostname: Router1
+    state: merged
+
+
+
+
