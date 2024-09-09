@@ -1,8 +1,15 @@
-- name: Apply the provided configuration
-  cisco.ios.ios_hostname:
-    config:
-      hostname: Router1
-    state: merged
+---
+- name: Hostname Config
+  hosts: routers
+
+  tasks:
+
+  - name: Apply the provided configuration
+    cisco.ios.ios_hostname:
+      config:
+        hostname: ROUTER_1_PRINCIPAL
+      state: merged
+
 
 
 
