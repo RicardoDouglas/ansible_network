@@ -1,0 +1,11 @@
+---
+- name: Change password
+  hosts: router
+
+  tasks:
+
+  - name: Aplicar
+    cisco.ios.ios_user:
+     name: netop
+     configured_password: "newpassword"
+     state: present

@@ -1,0 +1,11 @@
+---
+- name: hostname Config
+  hosts: router
+
+  tasks:
+
+  - name: Aplly the provided configuration
+    cisco.ios.ios_hostname:
+     config:
+       hostname: ROUTER_UP
+     state: merged

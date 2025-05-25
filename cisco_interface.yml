@@ -1,0 +1,16 @@
+---
+- name: Inserir description na interface
+  hosts: router
+
+  tasks:
+
+    - name: Configuração da description via Ansible
+      cisco.ios.ios_interfaces:
+        config:
+          - name: GigabitEthernet5
+            description:  Configured by Ansible-Network
+            mtu: 1500
+            enabled: true
+            duplex: full
+            speed: 1000
+        state: merged 
