@@ -1,0 +1,14 @@
+---
+- name: Inserir configuração na interface 
+  hosts: router
+
+  tasks:
+
+  - name: Configurar interface LAN
+    cisco.ios.ios_config:
+      lines:
+        - description CNX_LAN
+        - ip address 192.168.0.2 255.255.255.0
+        - no shutdown
+        - vrrp 1 ip 192.168.0.1
+      parents: interface GigabitEthernet2
