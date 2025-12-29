@@ -1,0 +1,27 @@
+# Arquivos de segredos/credenciais
+*.key
+*.pem
+*.vaultpass
+credentials.yml
+secrets.yml
+
+# Ambientes virtuais Python
+venv/
+.venv/
+
+# Dependências externas (se aplicável)
+roles/external/
+
+# Arquivos de cache e temporários
+.cache/
+.fact_cache/
+*.retry
+*.log
+htmlcov/ # Cobertura de código, se usada
+
+# Arquivos do Sistema Operacional/Editor
+.DS_Store
+.idea/
+.vscode/
+*~
+
